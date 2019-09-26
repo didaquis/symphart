@@ -11,9 +11,13 @@ Check with command: `composer -V`.
 
 Then navigate to directory "/Applications/XAMPP/xamppfiles/htdocs/sites" (or your public web server directory) and create a new Symfony proyect with this command: `composer create-project symfony/skeleton symphart`.
 
+> **NOTE:** I created this project inside a folder called "sites" but you can skip that folder if you prefer create a virtual host.
+
 Start your web server (Apache) and load in your browser this URL: `http://localhost/sites/symphart/public/`
 
-> **NOTE:** I created this project inside a folder called "sites" but you can skip that folder if you prefer create a virtual host.
+Et Voilà! You are ready to work.
+
+> **TIP:** You can create a basic `.htaccess` file inside "/public" folder.
 
 ## Resources:
 * [Symfony docs](https://symfony.com/doc)
