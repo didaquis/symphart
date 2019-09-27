@@ -13,6 +13,9 @@
 		 * @Method({"GET"})
 		 */
 		public function index() {
-			return $this->render('articles/index.html.twig');
+
+			$articles = ['Article 1', 'Article 2', 'Article 3'];
+
+			return $this->render('articles/index.html.twig', array('articles' => $articles));
 		}
 	}
