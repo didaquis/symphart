@@ -50,6 +50,10 @@ For start server in development mode: `php bin/console server:run`. Observe how 
 
 Et Voilà! You are ready to work.
 
+#### Optional development steps:
+* Install Annotations to define routes inside controllers: `composer require annotations`
+* Install Twig as template engine: `composer require twig`
+
 ## Resources:
 * [Symfony docs](https://symfony.com/doc)
 * [Composer docs](https://symfony.com/doc)
