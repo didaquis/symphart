@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
+
+        <script src="vendor/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="vendor/js/popper.min.js"></script>
+        <script src="vendor/js/bootstrap.min.js"></script>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
