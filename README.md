@@ -53,7 +53,9 @@ Et Voilà! You are ready to work.
 #### Optional development steps:
 * Install Annotations to define routes inside controllers: `composer require annotations`
 * Install Twig as template engine: `composer require twig`
+* Install Doctrine: `composer require doctrine maker`. If you want to use a database, you must create a copy of file `.env` and rename as `.env.local` and then define your SQL credentials and database name. Then execute `php bin/console doctrine:database:create`
 
 ## Resources:
+* [YouTube Tutorial](https://www.youtube.com/playlist?list=PLillGF-Rfqba-PQBBEf14-fi6LafvvDYS)
 * [Symfony docs](https://symfony.com/doc)
 * [Composer docs](https://symfony.com/doc)
