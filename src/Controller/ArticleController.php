@@ -18,4 +18,12 @@
 
 			return $this->render('articles/index.html.twig', array('articles' => $articles));
 		}
+
+		/**
+		 * @Route("/article/new")
+		 * @Method({"GET"})
+		 */
+		public function new() {
+			return $this->render('articles/new.html.twig');
+		}
 	}
