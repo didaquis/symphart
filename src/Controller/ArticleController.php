@@ -42,6 +42,6 @@
 			$entityManager->persist($article);
 			$entityManager->flush();
 
-			return new Response('Saves an article with the id of ' . $article->getId());
+			return new Response('Saved an article with the id of ' . $article->getId());
 		}
 	}

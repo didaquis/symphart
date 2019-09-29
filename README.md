@@ -62,6 +62,7 @@ Et Voilà! You are ready to work.
 
 #### Tips for development:
 * Examinate your routes: `php bin/console debug:router`
+* Execute queries to database from console: `php bin/console doctrine:query:sql 'SELECT * from article'`
 
 ## Resources:
 * [YouTube Tutorial](https://www.youtube.com/playlist?list=PLillGF-Rfqba-PQBBEf14-fi6LafvvDYS)
