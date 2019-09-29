@@ -59,6 +59,7 @@ Et Voilà! You are ready to work.
 	* Now you can create entities with the command `php bin/console make:entity Foo` (where "Foo" will be the name of entity). You can use the same command to update an existing entity
 	* Execute `php bin/console doctrine:migrations:diff` to create migration file. Database migrations are a way to safely update your database schema both locally and on production. Then execute the migration with the command `php bin/console doctrine:migrations:migrate`. Now your database will be upgrade to new structure.
 * Install Assets manager: `composer require symfony/asset`
+* Install form component: `composer require form`
 
 #### Tips for development:
 * Examinate your routes: `php bin/console debug:router`

@@ -3,5 +3,8 @@
 {% block title %}SymphArt Articles{% endblock %}
 
 {% block body %}
-	<h1>New</h1>
+	<h1>Create New Article</h1>
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
 {% endblock %}
