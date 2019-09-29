@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SymphArt Articles{% endblock %}
+
+{% block body %}
+
+	{% if article %}
+		<h1>{{article.title}}</h1>
+		<p>{{article.body}}</p>
+		<hr>
+		<a href="/" class="btn btn-dark">Go Back</a>
+	{% else %}
+		<p>No article to display</p>
+	{% endif %}
+
+{% endblock %}
