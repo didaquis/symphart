@@ -1,6 +1,6 @@
 # symphart
 
-An introduction to Sympfony 4.
+An introduction to Symfony 4.
 
 ## Baby steps for development:
 

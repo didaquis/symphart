@@ -7,10 +7,12 @@
 	{% if article %}
 		<h1>{{article.title}}</h1>
 		<p>{{article.body}}</p>
-		<hr>
-		<a href="/" class="btn btn-dark">Go Back</a>
 	{% else %}
-		<p>No article to display</p>
+		<div class="alert alert-danger" role="alert">
+			Article not found!
+		</div>
 	{% endif %}
+		<hr>
+		<a href="/article" class="btn btn-dark">Go Back</a>
 
 {% endblock %}
