@@ -7,6 +7,8 @@
 	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+	use App\Entity\Article;
+
 	class ArticleController extends Controller {
 		/**
 		 * @Route("/")
@@ -25,5 +27,21 @@
 		 */
 		public function new() {
 			return $this->render('articles/new.html.twig');
+		}
+
+		/**
+		 * @Route("/article/save")
+		 */
+		public function save() {
+			$entityManager = $this->getDoctrine()->getManager();
+
+			$article = new Article();
+			$article->setTitle('Article One');
+			$article->setBody('Body for article one');
+
+			$entityManager->persist($article);
+			$entityManager->flush();
+
+			return new Response('Saves an article with the id of ' . $article->getId());
 		}
 	}
