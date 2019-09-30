@@ -19,7 +19,6 @@
 		 * @Method({"GET"})
 		 */
 		public function list() {
-
 			$articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
 
 			return $this->render('articles/list.html.twig', array('articles' => $articles));
