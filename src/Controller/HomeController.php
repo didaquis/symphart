@@ -3,13 +3,11 @@
 	namespace App\Controller;
 
 	use Symfony\Component\Routing\Annotation\Route;
-	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-	class HomeController extends Controller {
+	class HomeController extends AbstractController {
 		/**
-		 * @Route("/", name="home")
-		 * @Method({"GET"})
+		 * @Route("/", name="home", methods={"GET"})
 		 */
 		public function home() {
 			return $this->render('home/home.html.twig');

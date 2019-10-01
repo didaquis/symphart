@@ -3,9 +3,9 @@
 	namespace App\Controller;
 
 	use Symfony\Component\HttpFoundation\Request;
+	use Symfony\Component\HttpFoundation\Response;
 	use Symfony\Component\Routing\Annotation\Route;
-	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 	use Symfony\Component\Form\Extension\Core\Type\TextType;
 	use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -13,10 +13,9 @@
 
 	use App\Entity\Article;
 
-	class ArticleController extends Controller {
+	class ArticleController extends AbstractController {
 		/**
-		 * @Route("/article", name="article_list")
-		 * @Method({"GET"})
+		 * @Route("/article", name="article_list", methods={"GET"})
 		 */
 		public function list() {
 			$articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
@@ -26,8 +25,7 @@
 
 
 		/**
-		 * @Route("/article/new", name="article_new")
-		 * @Method({"GET", "POST"})
+		 * @Route("/article/new", name="article_new", methods={"GET","POST"})
 		 */
 		public function new(Request $request) {
 			$article = new Article();
@@ -53,12 +51,25 @@
 
 
 		/**
-		 * @Route("/article/{id}", name="article_show")
-		 * @Method({"GET"})
+		 * @Route("/article/{id}", name="article_show", methods={"GET"})
 		 */
 		public function show($id) {
 			$article = $this->getDoctrine()->getRepository(Article::class)->find($id);
 
 			return $this->render('articles/show.html.twig', array('article' => $article));
+		}
+
+		/**
+		 * @Route("/article/delete/{id}", name="article_delete", methods={"DELETE"})
+		 */
+		public function delete(Request $request, $id) {
+			$article = $this->getDoctrine()->getRepository(Article::class)->find($id);
+
+			$entityManager = $this->getDoctrine()->getManager();
+			$entityManager->remove($article);
+			$entityManager->flush();
+
+			$response = new Response('', Response::HTTP_OK);
+			return $response->send();
 		}
 	}
