@@ -2,6 +2,22 @@
 
 An introduction to Symfony 4.
 
+![Preview](./docs-assets/preview.png)
+
+## Quick Start
+
+Requirements: Composer & MySQL service running.
+
+``` bash
+# Install dependencies
+composer install
+
+# Create and edit the ".env.local" file and add DB params
+
+# Run in development mode
+php bin/console server:run
+```
+
 ## Baby steps for development:
 
 Install Composer (globally)
@@ -67,6 +83,6 @@ Et Voilà! You are ready to work.
 * Execute queries to database from console: `php bin/console doctrine:query:sql 'SELECT * from article'`
 
 ## Resources:
-* [YouTube Tutorial](https://www.youtube.com/playlist?list=PLillGF-Rfqba-PQBBEf14-fi6LafvvDYS)
+* This repository contains the exercise explained in this [YouTube Tutorial](https://www.youtube.com/playlist?list=PLillGF-Rfqba-PQBBEf14-fi6LafvvDYS)
 * [Symfony docs](https://symfony.com/doc)
 * [Composer docs](https://symfony.com/doc)
