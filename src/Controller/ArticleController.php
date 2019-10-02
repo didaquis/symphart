@@ -32,7 +32,7 @@
 
 			$form = $this->createFormBuilder($article)
 				->add('title', TextType::class, array('attr' => array('class' => 'form-control')))
-				->add('body', TextareaType::class, array('required' => false, 'attr' => array('class' => 'form-control')))
+				->add('body', TextareaType::class, array('required' => false, 'attr' => array('class' => 'form-control'), 'empty_data' => ''))
 				->add('save', SubmitType::class, array('label' => 'Create New Article', 'attr' => array('class' => 'btn btn-primary mt-3')))
 				->getForm();
 
@@ -60,7 +60,7 @@
 
 			$form = $this->createFormBuilder($article)
 				->add('title', TextType::class, array('attr' => array('class' => 'form-control')))
-				->add('body', TextareaType::class, array('required' => false, 'attr' => array('class' => 'form-control')))
+				->add('body', TextareaType::class, array('required' => false, 'attr' => array('class' => 'form-control'), 'empty_data' => ''))
 				->add('save', SubmitType::class, array('label' => 'Update Article', 'attr' => array('class' => 'btn btn-primary mt-3')))
 				->getForm();
 

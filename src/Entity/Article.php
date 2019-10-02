@@ -24,7 +24,7 @@ class Article
     /**
      * @ORM\Column(type="text")
      */
-    private $body;
+    private $body = null;
 
     public function getId(): ?int
     {
